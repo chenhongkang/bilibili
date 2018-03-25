@@ -1,0 +1,103 @@
+p{
+	position:relative;
+	width:200px;
+}
+
+.colorTig{
+	height:50px;
+	width:150px;
+	padding:6px 12px;
+	position:absolute;  /*这样的话  要使用这个插件的元素都要设定其position的值*/
+	top:50%;
+	transform: translateY(50%);   /*不用居中 让偏下一些*/
+	right:-170px; 
+	color:rgb(255,255,255);
+	font-size: 12px;
+	text-align: center;
+	line-height: 24px;
+	opacity: 0.8;
+	border-radius: 5px;
+	display: none;
+}
+.scolorTig{   /*小屏幕下的colorTig显示标准*/
+	width:400px;
+	padding:6px 12px;
+	position:absolute;  /*这样的话  要使用这个插件的元素都要设定其position的值*/
+	bottom:-50px;
+	transform: translateX(-50%);
+	left:60%; 
+	color:rgb(255,255,255);
+	font-size: 12px;
+	text-align: center;
+	line-height: 24px;
+	opacity: 0.8;
+	border-radius: 5px;
+	display: none;
+}
+
+.yellow.colorTig,.yellow.scolorTig{
+	background:yellow;
+}
+.red.colorTig,.red.scolorTig{
+	background:red;
+}
+.black.colorTig,.black.scolorTig{
+	background:black;
+}
+.blue.colorTig,.blue.scolorTig{
+	background:blue;
+}
+
+.colorTig:after{
+	content: "";
+	width:0;
+	height:0;
+	border-top:10px transparent solid;
+	border-bottom: 10px transparent solid;
+	border-right: 10px transparent solid;
+	border-left: 10px transparent solid;
+	position:absolute;
+	top:50%;
+	transform: translateY(-50%);
+	left:-20px;
+}
+.red.colorTig:after{
+	border-right:10px red solid;
+}
+.yellow.colorTig:after{
+	border-right:10px yellow solid;
+}
+.blue.colorTig:after{
+	border-right:10px blue solid;
+}
+.black.colorTig:after{
+	border-right:10px black solid;
+}
+
+
+
+.scolorTig:after{  /*小屏幕下的显示*/
+	content: "";
+	width:0;
+	height:0;
+	border-top:10px transparent solid;
+	border-bottom: 10px transparent solid;
+	border-right: 10px transparent solid;
+	border-left: 10px transparent solid;
+	position:absolute;
+	left:50%;
+	transform: translateX(-50%);
+	top:-20px;
+}
+.red.scolorTig:after{
+	border-bottom:10px red solid;
+}
+.yellow.scolorTig:after{
+	border-bottom:10px yellow solid;
+}
+.blue.scolorTig:after{
+	border-bottom:10px blue solid;
+}
+.black.scolorTig:after{
+	border-bottom:10px black solid;
+}
